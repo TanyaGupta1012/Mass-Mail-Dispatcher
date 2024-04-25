@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk mass mail dispacter</title>
+    <link rel="stylesheet" href="css mass mail/style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Mass-Mail Dispatcher</h1>
+    </div>
+    <div class="container">
+        <div class="select animated fadeInDown delay-4s">
+        
+            <h2>Choose Your File From Here</h2>
+            <input type="file" id="upload" accept="text/csv">
+        </div>
+        <div class="mail-info">
+            <h2>Write Your Mail Here</h2>
+            <form onsubmit="sendEmail(event); reset(); return false;">
+                <p><input type="email" id="email" placeholder="From 'email-id'"></p>
+                <p><input type="text" id="subject" placeholder="Subject"></p>
+                <p><textarea id="text" cols="12" rows="12" placeholder="Body"></textarea></p>
+                <p><button class="btn">Send</button></p>
+            </form>
+        </div>
+    </div>
+    <hr class="line">
+    <div class="tables">
+        <div class="valid">
+            <table id="val">
+                <tr>
+                    <td>
+                        <h2>Valid Emails:
+                            <span id="valid-count"></span>
+                        </h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="Invalid">
+            <table id="inval">
+                <tr>
+                    <td>
+                        <h2>Invalid Emails:
+                            <span id="invalid-count"></span>
+                        </h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://smtp.com/v3/smtp.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+        var WOW = new WOW(
+            {
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true,
+                callback: function (box){
+
+                },
+                scrollContainer: null,
+                resetAnimation: true,
+            }
+        );   
+        wow.init(); -->
+    </script>
+</body>
+</html>
